@@ -68,8 +68,7 @@ double simpson(int n, double left_limit, double right_limit, bool table)
     double tk = left_limit;
     double delta_x = (right_limit - left_limit) / n;
 
-    int jj = 0;
-    for (jj; jj <= n; jj++)
+    for (int jj = 0; jj <= n; jj++)
     {
         if (table)      // Para inprimir la tabla
         {
