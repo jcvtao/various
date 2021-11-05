@@ -19,7 +19,7 @@ int main()
     // Formato tabla
     std::cout << "\nn = " << n << "\t\t\tdelta_x: " << delta_x << "\n";
     std::cout << "f(x) = e^{x^{3}}\tIntervalo: [" << left_limit << "," << right_limit << "]\n\n";
-    std::cout << "t_k\tx_k\t\tf(x_k)\n----\t------------\t------------\n";
+    std::cout << "t_k\tx_k\t\tf(x_k)\n-----\t------------\t------------\n";
 
     // Resultado
     double result = simpson(n, left_limit, right_limit, true);
@@ -68,8 +68,7 @@ double simpson(int n, double left_limit, double right_limit, bool table)
     double tk = left_limit;
     double delta_x = (right_limit - left_limit) / n;
 
-    int jj = 0;
-    for (jj; jj <= n; jj++)
+    for (int jj = 0; jj <= n; jj++)
     {
         if (table && jj % 2 == 0)      // Para inprimir la tabla
         {
